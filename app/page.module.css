@@ -97,3 +97,15 @@
     rgba(0, 0, 255, 0.518)
   );
 }
+.author p {
+  font-size: 0.75rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+.author a {
+  display: block;
+  width: 50%;
+  font-size: 0.75rem;
+  margin: 0 auto;
+  text-align: center;
+}

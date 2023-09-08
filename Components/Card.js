@@ -5,6 +5,7 @@ import styles from "../app/page.module.css";
 import { useState, useEffect } from "react";
 
 function Card({ infoObj, n }) {
+  console.log(infoObj.author[2].props);
   const x = JSON.parse(localStorage.getItem(n));
   console.log(x);
   console.log(n);
@@ -57,6 +58,19 @@ function Card({ infoObj, n }) {
         />
 
         <p>{infoObj.name}</p>
+        <div className={styles.author}>
+          <p>{infoObj.author[0].props.children}</p>
+          <a
+            href={infoObj.author[1].props.href}
+            title={infoObj.author[1].props.title}
+          >
+            {infoObj.author[1].props.children}
+          </a>
+          <p> </p>
+          <a href={infoObj.author[2].props.href}>
+            {infoObj.author[2].props.children}
+          </a>
+        </div>
       </div>
     );
   }
