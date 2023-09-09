@@ -5,16 +5,21 @@ import styles from "../app/page.module.css";
 import { useState, useEffect } from "react";
 
 function Card({ infoObj, n }) {
-  console.log(infoObj.author[2].props);
-  const x = JSON.parse(localStorage.getItem(n));
-  console.log(x);
-  console.log(n);
+  let x = null;
+  const [count, setCount] = useState(0);
   const [state, setState] = useState(x);
   const [check, setCheck] = useState(false);
   const [image, setImage] = useState(false);
   useEffect(() => {
+    x = JSON.parse(localStorage.getItem(n));
+    setState(x);
+    setCheck(x);
+  }, [count]);
+  useEffect(() => {
     localStorage.setItem(n, JSON.stringify(state));
+    x = JSON.parse(localStorage.getItem(n));
   }, [state]);
+
   const handleState = function () {
     !state ? setState(true) : setState(false);
   };
@@ -28,6 +33,13 @@ function Card({ infoObj, n }) {
     setImage(false);
   };
 
+  if (count === 0) {
+    return (
+      <div className={styles.containerCard}>
+        <button onClick={() => setCount(count + 1)}>CLICK</button>
+      </div>
+    );
+  }
   if (!check && (x === false || x === null)) {
     return (
       <div className={styles.containerCard}>

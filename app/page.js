@@ -183,8 +183,6 @@ const info = [
 ];
 
 export default function Home() {
-  // localStorage.clear();
-
   return (
     <main className={styles.main}>
       <div className={styles.tittle}>
