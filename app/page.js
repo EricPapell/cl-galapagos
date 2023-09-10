@@ -43,7 +43,7 @@ const info = [
   },
   {
     img: azul,
-    name: "Blue-footed Boby",
+    name: "Blue-footed Booby",
     index: 1,
     author: [
       <p>"De Benjamint444 - Trabajo propio, GFDL 1.2"</p>,
