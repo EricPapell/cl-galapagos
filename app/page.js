@@ -196,7 +196,11 @@ export default function Home() {
     return (
       <main className={styles.main}>
         <div className={styles.tittle}>
-          <h1>CHECK LIST DE GALAPAGOS!</h1>
+          <h1>
+            {" "}
+            <span className={styles.titleSpan}>CHECK LIST DE</span> <br />{" "}
+            GALAPAGOS!
+          </h1>
           <Image alt="pic" className={styles.logo} src={logo} />
         </div>
         <div className={styles.container}>
@@ -218,7 +222,11 @@ export default function Home() {
     return (
       <main className={styles.main}>
         <div className={styles.tittle}>
-          <h1>CHECK LIST DE GALAPAGOS!</h1>
+          <h1>
+            {" "}
+            <span className={styles.titleSpan}>CHECK LIST DE</span> <br />{" "}
+            GALAPAGOS!
+          </h1>
           <Image alt="pic" className={styles.logo} src={logo} />
         </div>
         <div className={styles.container}>

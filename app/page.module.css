@@ -1,25 +1,23 @@
 .main {
   min-height: 100vh;
-  background: linear-gradient(rgba(109, 180, 213, 0.716), rgb(77, 131, 154));
+  background: linear-gradient(rgba(102, 170, 170, 0.716), rgb(77, 131, 154));
 }
 .tittle {
-  background: linear-gradient(
-    rgb(134, 184, 134),
-    rgb(82, 128, 82),
-    rgb(82, 128, 82)
-  );
   text-align: center;
-  padding-top: 1.8rem;
+  padding-top: 4rem;
   padding-bottom: 1.2rem;
   margin-bottom: 2rem;
 }
 .tittle h1 {
-  font-size: 1.5rem;
-  color: rgb(247, 240, 231);
+  font-size: 2rem;
+  color: rgb(162, 100, 19);
   margin-bottom: 1rem;
 }
+.titleSpan {
+  color: rgb(247, 240, 231);
+}
 .logo {
-  width: 100px;
+  width: 80px;
   height: auto;
 }
 .container {
