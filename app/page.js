@@ -67,7 +67,7 @@ const info = [
   },
   {
     img: rojo,
-    name: "Red-footed Boby",
+    name: "Red-footed Booby",
     index: 3,
     author: [
       <p>
