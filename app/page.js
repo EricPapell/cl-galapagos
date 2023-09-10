@@ -1,7 +1,11 @@
+"use client";
 import Image from "next/image";
 import Btn from "@/Components/Button";
 import styles from "./page.module.css";
 import Card from "@/Components/Card";
+
+import { useState, useEffect } from "react";
+
 import logo from "../public/images/turtle.png";
 import albatro from "../public/images/albatross.jpg";
 import azul from "../public/images/patiazul.jpg";
@@ -183,18 +187,46 @@ const info = [
 ];
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.tittle}>
-        <h1>CHECK LIST DE GALAPAGOS!</h1>
-        <Image alt="pic" className={styles.logo} src={logo} />
-      </div>
-      <div className={styles.container}>
-        {info.map((el, i) => {
-          return <Card key={i} n={i} infoObj={el} />;
-        })}
-        <Btn />
-      </div>
-    </main>
-  );
+  const [count, setCount] = useState(0);
+  const handleCount = function () {
+    setCount(count + 1);
+  };
+
+  if (count === 0) {
+    return (
+      <main className={styles.main}>
+        <div className={styles.tittle}>
+          <h1>CHECK LIST DE GALAPAGOS!</h1>
+          <Image alt="pic" className={styles.logo} src={logo} />
+        </div>
+        <div className={styles.container}>
+          <div className={styles.containerBtn}>
+            <button
+              className={styles.btnMemory}
+              onClick={() => setCount(count + 1)}
+            >
+              {" "}
+              Reempezar donde lo dejaste!
+            </button>
+            <Btn handleCount={handleCount} />
+          </div>
+        </div>
+      </main>
+    );
+  }
+  if (count === 1) {
+    return (
+      <main className={styles.main}>
+        <div className={styles.tittle}>
+          <h1>CHECK LIST DE GALAPAGOS!</h1>
+          <Image alt="pic" className={styles.logo} src={logo} />
+        </div>
+        <div className={styles.container}>
+          {info.map((el, i) => {
+            return <Card key={i} n={i} infoObj={el} count={count} />;
+          })}
+        </div>
+      </main>
+    );
+  }
 }

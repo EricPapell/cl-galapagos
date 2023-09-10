@@ -1,9 +1,6 @@
 .main {
-  background: linear-gradient(
-    rgb(112, 144, 163),
-    rgb(135, 175, 200),
-    rgb(119, 151, 169)
-  );
+  min-height: 100vh;
+  background: linear-gradient(rgba(109, 180, 213, 0.716), rgb(77, 131, 154));
 }
 .tittle {
   background: linear-gradient(
@@ -86,7 +83,27 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.containerBtn {
+  /* border: 1px solid red; */
+  height: 500px;
+  display: flex;
+  row-gap: 3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .btn {
+  color: rgb(43, 26, 26);
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  padding: 0.25rem 0.5rem;
+  background: linear-gradient(
+    rgba(0, 128, 0, 0.502),
+    rgba(255, 255, 255, 0.503),
+    rgba(0, 0, 255, 0.518)
+  );
+}
+.btnMemory {
   color: rgb(43, 26, 26);
   letter-spacing: 2px;
   font-size: 1.5rem;

@@ -4,9 +4,10 @@ import Image from "next/image";
 import styles from "../app/page.module.css";
 import { useState, useEffect } from "react";
 
-function Card({ infoObj, n }) {
+function Card({ infoObj, n, count }) {
   let x = null;
-  const [count, setCount] = useState(0);
+
+  const [count2, setCount] = useState(count);
   const [state, setState] = useState(x);
   const [check, setCheck] = useState(false);
   const [image, setImage] = useState(false);
@@ -14,7 +15,7 @@ function Card({ infoObj, n }) {
     x = JSON.parse(localStorage.getItem(n));
     setState(x);
     setCheck(x);
-  }, [count]);
+  }, [count2]);
   useEffect(() => {
     localStorage.setItem(n, JSON.stringify(state));
     x = JSON.parse(localStorage.getItem(n));
@@ -33,13 +34,6 @@ function Card({ infoObj, n }) {
     setImage(false);
   };
 
-  if (count === 0) {
-    return (
-      <div className={styles.containerCard}>
-        <button onClick={() => setCount(count + 1)}>CLICK</button>
-      </div>
-    );
-  }
   if (!check && (x === false || x === null)) {
     return (
       <div className={styles.containerCard}>

@@ -1,18 +1,21 @@
 "use client";
 import styles from "../app/page.module.css";
 
-function Btn() {
+function Btn({ handleCount }) {
   const borrarCache = function () {
     localStorage.clear();
   };
 
   return (
     <div>
-      <form>
-        <button className={styles.btn} onClick={borrarCache}>
-          Try again
-        </button>
-      </form>
+      <button
+        className={styles.btn}
+        onClick={() => {
+          borrarCache(), handleCount();
+        }}
+      >
+        Empezar de nuevo!
+      </button>
     </div>
   );
 }
