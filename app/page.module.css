@@ -1,6 +1,9 @@
 .main {
   min-height: 100vh;
-  background: linear-gradient(rgba(102, 170, 170, 0.716), rgb(77, 131, 154));
+  background: linear-gradient(
+    rgba(136, 165, 171, 0.716),
+    rgba(99, 127, 131, 0.716)
+  );
 }
 .tittle {
   text-align: center;
@@ -34,8 +37,9 @@
   width: 300px;
   border: 1px solid rgb(199, 193, 193);
   box-shadow: 1px 1px 10px rgb(177, 176, 176);
-  padding: 2rem;
-  background-color: rgba(223, 221, 221, 0.555);
+  padding: 2rem 1rem;
+  background-color: rgba(212, 220, 225, 0.654);
+  border-radius: 10px;
 }
 .containerCard input {
   width: 20px;
@@ -71,6 +75,7 @@
 .containerCard p {
   text-align: center;
   font-size: 1.5rem;
+  color: rgb(49, 49, 50);
 }
 
 .oculto p {
@@ -83,9 +88,9 @@
 }
 .containerBtn {
   /* border: 1px solid red; */
-  height: 500px;
+  height: 350px;
   display: flex;
-  row-gap: 3rem;
+  row-gap: 2rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -95,22 +100,18 @@
   letter-spacing: 2px;
   font-size: 1.5rem;
   padding: 0.25rem 0.5rem;
-  background: linear-gradient(
-    rgba(0, 128, 0, 0.502),
-    rgba(255, 255, 255, 0.503),
-    rgba(0, 0, 255, 0.518)
-  );
+  border-radius: 10px;
+  background: rgba(139, 36, 36, 0.67);
+  color: aliceblue;
 }
 .btnMemory {
-  color: rgb(43, 26, 26);
+  border-radius: 10px;
+  color: aliceblue;
+  background: rgba(36, 139, 62, 0.67);
+
   letter-spacing: 2px;
   font-size: 1.5rem;
   padding: 0.25rem 0.5rem;
-  background: linear-gradient(
-    rgba(0, 128, 0, 0.502),
-    rgba(255, 255, 255, 0.503),
-    rgba(0, 0, 255, 0.518)
-  );
 }
 .author p {
   font-size: 0.75rem;

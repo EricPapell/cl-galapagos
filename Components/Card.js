@@ -3,6 +3,8 @@ import Image from "next/image";
 
 import styles from "../app/page.module.css";
 import { useState, useEffect } from "react";
+import { Roboto_Mono } from "next/font/google";
+const player = Roboto_Mono({ subsets: ["latin"] });
 
 function Card({ infoObj, n, count }) {
   let x = null;
@@ -46,7 +48,7 @@ function Card({ infoObj, n, count }) {
         />
         <div className={styles.containerImg}>
           <div className={styles.oculto}>
-            <p>?</p>
+            <p className={player.className}>?</p>
           </div>
         </div>
         <p>{infoObj.name}</p>

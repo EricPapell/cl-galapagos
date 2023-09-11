@@ -209,7 +209,6 @@ export default function Home() {
               className={styles.btnMemory}
               onClick={() => setCount(count + 1)}
             >
-              {" "}
               Reempezar donde lo dejaste!
             </button>
             <Btn handleCount={handleCount} />
