@@ -43,7 +43,7 @@ const info = [
   },
   {
     img: azul,
-    name: "Blue-footed Booby",
+    name: "Blue-footed Boobie",
     index: 1,
     author: [
       <p>"De Benjamint444 - Trabajo propio, GFDL 1.2"</p>,
@@ -55,7 +55,7 @@ const info = [
   },
   {
     img: nazca,
-    name: "Nazca Booby",
+    name: "Nazca Boobie",
     index: 2,
     author: [
       <p>"By Benjamint444 - Own work, GFDL 1.2"</p>,
@@ -67,7 +67,7 @@ const info = [
   },
   {
     img: rojo,
-    name: "Red-footed Booby",
+    name: "Red-footed Boobie",
     index: 3,
     author: [
       <p>
